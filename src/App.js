@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import MoviesList from "./components/MoviesList";
 import "./App.css";
+import milkyway from "./milkyway.mp4"
 
 function App() {
   const [movies, setMovies] = useState([]); //state for movies name
@@ -54,6 +55,9 @@ function App() {
 
   return (
     <React.Fragment>
+      <video autoPlay loop muted>
+        <source src={milkyway} type="video/mp4" />
+      </video>
       <section>
         <button onClick={fetchMovieHandler}>Fetch Movies</button>
       </section>
